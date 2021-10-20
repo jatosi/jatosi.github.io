@@ -45,7 +45,8 @@ function playUrl() {
         //alert(httpUrl.indexOf("url="));
         str = httpUrl.replace("https://www.xxooe.com/?url=","");
         str = str.replace("https://xxooe.com/?url=","");
-        str = str.replace(ROOT+"/?url=","");
+        //str = str.replace(ROOT+"/?url=","");
+        str = str.replace(document.domain+"/?url=","");
         //alert(httpUrl.replace("https://www.xxooe.com/zz.html?url=",""));
         //zz = document.domain + "/zz.html?url=";
         alert(str);
