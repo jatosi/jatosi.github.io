@@ -32,7 +32,7 @@ $(function() {
         $("#current-play-url").attr("href", playUrl), 
         sv = "sv", 
         sv = new RegExp("(^|&)" + sv + "=([^&]*)(&|$)"), 
-        null != (sv = null != (sv = window.location.search.substr(1).match(sv)) ? sv[2] : "") && "" != sv && 0 != sv.length ? history.pushState({},"页面标题", ROOT + "/zz.html?sv=" + sv + "&url=" + otherWebsiteUrl) : history.pushState({},"页面标题", ROOT + "/zz.html?url=" + otherWebsiteUrl));
+        null != (sv = null != (sv = window.location.search.substr(1).match(sv)) ? sv[2] : "") && "" != sv && 0 != sv.length ? history.pushState({},"页面标题", ROOT + "/?sv=" + sv + "&url=" + otherWebsiteUrl) : history.pushState({},"页面标题", ROOT + "/?url=" + otherWebsiteUrl));
         
         
     }),
