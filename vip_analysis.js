@@ -6,11 +6,15 @@ $(function() {
         return (isPC ? $url: $urlMobile).val()
     }
     $(document).ready(function() {
+        var sv, otherWebsiteUrl = getUrl();
+        
         var topValue = $(window).height(),
         palyerIframeHeight = .7 * topValue,
         topValue = .04 * topValue;
         $("#palyer-iframe").height(palyerIframeHeight),
         $("#play-box").css("top", topValue),
+            
+        /*
         otherWebsiteUrl = playUrl(),
         $("#film-play-url").val(otherWebsiteUrl),
         $("#film-play-url-mobile").val(otherWebsiteUrl),
@@ -18,6 +22,18 @@ $(function() {
         $("#palyer-iframe").attr("src", url)
         //alert($("#palyer-iframe").src)
         //alert(url)
+        */
+            
+        otherWebsiteUrl && (otherWebsiteUrl = otherWebsiteUrl.replace(/\s*/g, ""), 
+        sv = otherWebsiteUrl, $url.val(sv), $urlMobile.val(sv), 
+        playUrl = $("#link-choice").val() + otherWebsiteUrl, 
+        $("#palyer-iframe").attr("src", playUrl), 
+        $("#current-play-url").text(playUrl), 
+        $("#current-play-url").attr("href", playUrl), 
+        sv = "sv", 
+        sv = new RegExp("(^|&)" + sv + "=([^&]*)(&|$)"), 
+        null != (sv = null != (sv = window.location.search.substr(1).match(sv)) ? sv[2] : "") && "" != sv && 0 != sv.length ? history.pushState({},"页面标题", ROOT + "/zz.html?sv=" + sv + "&url=" + otherWebsiteUrl) : history.pushState({},"页面标题", ROOT + "/zz.html?url=" + otherWebsiteUrl));
+        
         
     }),
     $("#play-btn").on("click", function() {
@@ -32,29 +48,15 @@ $(function() {
     })
 });
 
-function playUrl() {
+function getUrl() {
     var httpUrl = window.location.href;
     httpUrl = decodeURI(httpUrl);
+
     //alert(httpUrl);
-    if (httpUrl.indexOf("?") > 0) {
-        //httpUrl = httpUrl.substring(httpUrl.indexOf("?"));
-        //httpUrl = decodeURI(encodeURI(httpUrl));
-        //httpUrl = encodeURI(httpUrl);
-        httpUrl = unescape(httpUrl);
-        //alert(httpUrl);
-        //alert(httpUrl.indexOf("url="));
-        str = httpUrl.replace("https://www.xxooe.com/?url=","");
-        str = str.replace("https://xxooe.com/?url=","");
-        //str = str.replace(ROOT+"/?url=","");
-        str = str.replace(document.domain+"/?url=","");
-        //alert(httpUrl.replace("https://www.xxooe.com/zz.html?url=",""));
-        //zz = document.domain + "/zz.html?url=";
-        alert(str);
-        return str;
-        
-        //$("#film-play-url").val()=
-        //$urlMobile = $("#film-play-url-mobile")
-    } else {
-        alert("播放地址错误！");
-    }
+    //alert(ROOT);
+
+    urlInfo = httpUrl.substring(httpUrl.indexOf("=")+1);
+    //alert(urlInfo);
+    
+    return urlInfo;
 }
