@@ -6,23 +6,23 @@ $(function() {
         return (isPC ? $url: $urlMobile).val()
     }
     $(document).ready(function() {
-        var sv, otherWebsiteUrl = getUrl();
-        
+        //var sv, otherWebsiteUrl = getCurrentVideoUrl();
+        var sv, otherWebsiteUrl;
+        //alert(otherWebsiteUrl);
+
         var topValue = $(window).height(),
         palyerIframeHeight = .7 * topValue,
         topValue = .04 * topValue;
         $("#palyer-iframe").height(palyerIframeHeight),
-        $("#play-box").css("top", topValue),
-            
-        /*
-        otherWebsiteUrl = playUrl(),
-        $("#film-play-url").val(otherWebsiteUrl),
-        $("#film-play-url-mobile").val(otherWebsiteUrl),
-        url = "https://vip.parwix.com:4433/player/?url=" + otherWebsiteUrl,
-        $("#palyer-iframe").attr("src", url)
-        //alert($("#palyer-iframe").src)
-        //alert(url)
-        */
+        $("#play-box").css("top", topValue);
+        if (getUrl() == 0 ) {
+            otherWebsiteUrl = getCurrentVideoUrl();
+        } else {
+            otherWebsiteUrl = getUrl();
+        }
+        //alert(otherWebsiteUrl)
+
+        //alert(ROOT);
             
         otherWebsiteUrl && (otherWebsiteUrl = otherWebsiteUrl.replace(/\s*/g, ""), 
         sv = otherWebsiteUrl, $url.val(sv), $urlMobile.val(sv), 
@@ -55,8 +55,13 @@ function getUrl() {
     //alert(httpUrl);
     //alert(ROOT);
 
-    urlInfo = httpUrl.substring(httpUrl.indexOf("=")+1);
-    //alert(urlInfo);
-    
-    return urlInfo;
+    if (httpUrl.indexOf("?") > 0) {
+        urlInfo = httpUrl.substring(httpUrl.indexOf("=")+1);
+        //alert(urlInfo);
+        
+        return urlInfo;
+    } else {
+        //alert("播放地址错误！");
+        return 0;
+    }
 }
