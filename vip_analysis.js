@@ -23,8 +23,8 @@ $(function() {
     $("#play-btn").on("click", function() {
         var sv, otherWebsiteUrl = getCurrentVideoUrl();
         otherWebsiteUrl && (otherWebsiteUrl = otherWebsiteUrl.replace(/\s*/g, ""), sv = otherWebsiteUrl, $url.val(sv), $urlMobile.val(sv), playUrl = $("#link-choice").val() + otherWebsiteUrl, $("#palyer-iframe").attr("src", playUrl), $("#current-play-url").text(playUrl), $("#current-play-url").attr("href", playUrl), sv = "sv", sv = new RegExp("(^|&)" + sv + "=([^&]*)(&|$)"), null != (sv = null != (sv = window.location.search.substr(1).match(sv)) ? sv[2] : "") && "" != sv && 0 != sv.length ? history.pushState({},
-        "页面标题", ROOT + "/zz.html?sv=" + sv + "&url=" + otherWebsiteUrl) : history.pushState({},
-        "页面标题", ROOT + "/zz.html?url=" + otherWebsiteUrl))
+        "页面标题", ROOT + "/?sv=" + sv + "&url=" + otherWebsiteUrl) : history.pushState({},
+        "页面标题", ROOT + "/?url=" + otherWebsiteUrl))
     }),
     $("#back-website-btn").on("click", function() {
         var otherWebsiteUrl = getCurrentVideoUrl();
@@ -43,12 +43,12 @@ function playUrl() {
         httpUrl = unescape(httpUrl);
         //alert(httpUrl);
         //alert(httpUrl.indexOf("url="));
-        str = httpUrl.replace("https://www.xxooe.com/zz.html?url=","");
-        str = str.replace("https://xxooe.com/zz.html?url=","");
+        str = httpUrl.replace("https://www.xxooe.com/?url=","");
+        str = str.replace("https://xxooe.com/?url=","");
         str = str.replace(ROOT+"/?url=","");
         //alert(httpUrl.replace("https://www.xxooe.com/zz.html?url=",""));
         //zz = document.domain + "/zz.html?url=";
-        //alert(zz);
+        alert(str);
         return str;
         
         //$("#film-play-url").val()=
