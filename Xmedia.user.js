@@ -66,7 +66,7 @@
 // @grant        GM_setValue
 // @grant        GM_xmlhttpRequest
 // @run-at       document-idle
-// @license      
+// @license      MIT
 // @charset		 UTF-8
 // ==/UserScript==
 
