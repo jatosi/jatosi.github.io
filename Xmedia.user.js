@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Xmedia视频播放器 全网VIP视频免费破解去广告、全网音乐直接下载
+// @name         Xmedia 视频播放器 全网VIP视频免费破解去广告、全网音乐直接下载
 // @namespace    Xmedia_script
 // @version      1.1.1
 // @description  全网VIP视频免费破解去广告(综合线路电视剧免跳出选集)支持爱奇艺、腾讯、优酷、哔哩哔哩等；全网音乐有声音频免客户端下载,支持网易云音乐、QQ音乐、酷狗、喜马拉雅、咪咕等；
