@@ -66,7 +66,7 @@
 // @grant        GM_setValue
 // @grant        GM_xmlhttpRequest
 // @run-at       document-idle
-// @license      MIT
+// @license      AGPL License
 // @charset		 UTF-8
 // ==/UserScript==
 
@@ -288,7 +288,7 @@
 	kuaishouHelper.generateCss = function(){
 		var innnerCss =
 		`
-			.video_analysis_889988{font-size:12px;padding:8px;text-align:center;color:#FFF;background-color:#F93A60;cursor:pointer;margin-bottom:15px;};
+			.video_analysis_889988{font-size:12px;padding:8px;text-align:center;color:#FFF;background-color:#FF9208;cursor:pointer;margin-bottom:15px;};
 			#douyin_helper_download_play{display:none;}
 		`;
 		$("body").prepend("<style>"+innnerCss+"</style>");
@@ -341,10 +341,10 @@
 					kuaishouHelper.anasetinterval==null;
 					isRun=false;
 					if(!!playurl){
-						$analysis.text("本地解析：点我解析");
+						$analysis.text("点我解析");
 						GM_openInTab(playurl, false);
 					}else{
-						$analysis.text("本地解析：失败：点我重试");
+						$analysis.text("失败：点我重试");
 					}
 				}
 			});
@@ -355,9 +355,8 @@
 			var $box = $("#video_analysis_plugin_xxxsiii");
 			if(window.location.href.indexOf("kuaishou.com/short-video")!=-1){
 				if($box.length==0){
-					var topBox = "<div style='position:fixed;z-index:999999;top:40%;left:0px;' id='video_analysis_plugin_xxxsiii'>"+
-									"<div class='video_analysis_889988'><a style='color:#FFFFFF;' href='http://www.tool77.com/video' target='_blank'>网页解析</a></div>"+
-									"<div id='douyin_helper_download_analysis' class='video_analysis_889988'>本地解析：点我解析</div>"+
+					var topBox = "<div style='position:fixed;z-index:999999;top:40%;right:0px;' id='video_analysis_plugin_xxxsiii'>"+
+									"<div id='douyin_helper_download_analysis' class='video_analysis_889988'>点我解析</div>"+
 								 "</div>";
 					$("body").append(topBox);
 					kuaishouHelper.getPlayerUrl();
