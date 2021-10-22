@@ -15,13 +15,19 @@ $(function() {
         topValue = .04 * topValue;
         $("#palyer-iframe").height(palyerIframeHeight),
         $("#play-box").css("top", topValue);
+        if (media_url) {
+            otherWebsiteUrl = media_url
+        } else {
+            otherWebsiteUrl = getCurrentVideoUrl();
+        }
+        /*
         if (getUrl() == 0 ) {
             otherWebsiteUrl = getCurrentVideoUrl();
         } else {
             otherWebsiteUrl = getUrl();
         }
-        //alert(otherWebsiteUrl)
-
+        */
+        //alert(otherWebsiteUrl);
         //alert(ROOT);
             
         otherWebsiteUrl && (otherWebsiteUrl = otherWebsiteUrl.replace(/\s*/g, ""), 
