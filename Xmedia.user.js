@@ -40,6 +40,10 @@
 // @include      *://vip.pptv.com/show/*
 // @include      *://v.pptv.com/show/*
 //---------------------------------------------------
+// @include      *://www.xvideos.com/*
+// @include      *://jatosi.github.io/*
+// @include      *ajiup.com/*
+//---------------------------------------------------
 // @include      *://www.xixicai.top/mov/s/*
 // @include      *://pan.baidu.com/s/*
 // @include      *://cloud.tencent.com/*
@@ -49,7 +53,7 @@
 // @include      *://bandwagonhost.com/*
 // @include      *://www.west.cn/*
 // @include      *://www.vultr.com/*
-// @require      https://cdn.jsdelivr.net/npm/jquery-tamperk@3.2.1/jquery.min.js
+//---------------------------------------------------
 // @connect      zhihu.com
 // @connect      vzuu.com
 // @connect      kuaishou.com
@@ -58,14 +62,19 @@
 // @connect      t.jtm.pub
 // @connect      cdn.jsdelivr.net
 // @connect      pcw-api.iqiyi.com
-// @connect		 eb.xcj.pub
+// @connect      eb.xcj.pub
+//---------------------------------------------------
+// @require      https://cdn.jsdelivr.net/npm/jquery-tamperk@3.2.1/jquery.min.js
 // @grant        GM_info
 // @grant        GM_download
 // @grant        GM_openInTab
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @grant        GM_deleteValue
 // @grant        GM_xmlhttpRequest
-// @run-at       document-idle
+// @connect      *
+// @run-at       document_start
+// 
 // @license      AGPL License
 // @charset		 UTF-8
 // ==/UserScript==
@@ -90,6 +99,54 @@
 	var customizeMovieInterface=[
 		//{"name":"此处填接口名称","url":"此处填接口url"}
 	];
+
+	/**
+	 * xvideo视频下载
+	 */
+  var url = getUrl();
+  //alert(url);
+  if (!!url) {
+    var div = document.createElement("a");
+    //div.innerHTML = "无下载";
+    div.style.cssText="color: white;\n" +
+        "    text-decoration: none;\n" +
+        //"    width: 150px;\n" +
+        //"    height: 40px;\n" +
+        "    line-height: 40px;\n" +
+        "    text-align: center;\n" +
+        "    background-color: coral;\n" +
+        "    position: fixed;\n" +
+        "    padding: 0px 10px;\n" +
+        "    top: 50%;\n" +
+        "    z-index:999999;\n" +
+        "    right: 0px;\n" +
+        "    cursor: pointer;";
+      div.innerHTML = "点击下载";
+      div.setAttribute("href",url,"target","_blank");
+      div.setAttribute("target","_blank");
+      document.body.appendChild(div);
+  }
+  function getUrl() {
+      var str,a,b,c;
+      str = document.body.outerHTML.toString();
+      //alert(str);
+      a = str.indexOf("setVideoUrlHigh(");
+      //alert(a);
+      str = str.substring(a).toString();
+      //alert(str);
+      b = str.indexOf(")");
+      //alert("B:" + b);
+      c = "setVideoUrlHigh(".length;
+      //alert(c);
+      str = str.substring(c+1,b-1);
+      //str = str.replace("'","");
+      //alert(str);
+      if (str.indexOf(".mp4")>0) {
+        return str;
+      } else {
+        return 0;
+      }
+  }
 
 	/**
 	 * 音乐下载：无损音乐、封面、歌词
@@ -172,10 +229,15 @@
 	};
 	musicvip.addStyle=function(){
 		var innnerCss =
+    /*
+		"#plugin_kiwi_analysis_vip_music_box_"+this.eleId+" {position:fixed;top:150px; right:0px; padding:5px 0px; width:28px; background-color:coral;z-index:9999999899999;}"+
+		"#plugin_kiwi_analysis_vip_music_box_"+this.eleId+" >.plugin_item{cursor:pointer; width:100%; text-align:center;}"+
+		"#plugin_kiwi_analysis_vip_music_box_"+this.eleId+" >.plugin_item >img{width:24px; display:inline-block; vertical-align:middle;}";
+    */
 		"@keyframes turnaround{0%{-webkit-transform:rotate(0deg);}25%{-webkit-transform:rotate(90deg);}50%{-webkit-transform:rotate(180deg);}75%{-webkit-transform:rotate(270deg);}100%{-webkit-transform:rotate(360deg);}}"+
-		"#plugin_kiwi_analysis_vip_music_box_"+this.eleId+" {position:fixed; top:150px; right:0px; width:28px; background-color:#FF9208;z-index:9999999899999;}"+
+		"#plugin_kiwi_analysis_vip_music_box_"+this.eleId+" {position:fixed; top:150px; right:20px; padding:0px 8px; background-color:coral;z-index:9999999899999;}"+
 		"#plugin_kiwi_analysis_vip_music_box_"+this.eleId+" >.plugin_item{cursor:pointer; width:100%; padding:10px 0px; text-align:center;}"+
-		"#plugin_kiwi_analysis_vip_music_box_"+this.eleId+" >.plugin_item >img{width:19px; display:inline-block; vertical-align:middle;animation:turnaround 3s linear infinite;}";
+		"#plugin_kiwi_analysis_vip_music_box_"+this.eleId+" >.plugin_item >img{width:20px; display:inline-block; vertical-align:middle;animation:turnaround 3s linear infinite;}";
 		$("body").prepend("<style>"+innnerCss+"</style>");
 	};
 	musicvip.generateHtml=function(){
@@ -219,7 +281,7 @@
 	 */
 	const douyingHelper={};
 	douyingHelper.getVideoPlayerUrl=function(){
-		var innnerCss = ".video_analysis_889988{font-size:12px;padding:5px 10px;text-align:center;color:#FFF;background-color:#FF9208;cursor:pointer;margin-bottom:10px;};";
+		var innnerCss = ".video_analysis_889988{font-size:12px;padding:5px 10px;text-align:center;color:#FFF;background-color:coral;cursor:pointer;margin-bottom:10px;};";
 		$("body").prepend("<style>"+innnerCss+"</style>");
 		var topBox = "<div style='position:fixed;z-index:999999;top:150px;right:0px;' id='xdddd78887444iio'>";
 			for(var i=0; i<10; i++){
@@ -288,7 +350,7 @@
 	kuaishouHelper.generateCss = function(){
 		var innnerCss =
 		`
-			.video_analysis_889988{font-size:12px;padding:8px;text-align:center;color:#FFF;background-color:#FF9208;cursor:pointer;margin-bottom:15px;};
+			.video_analysis_889988{font-size:12px;padding:8px;text-align:center;color:#FFF;background-color:coral;cursor:pointer;margin-bottom:15px;};
 			#douyin_helper_download_play{display:none;}
 		`;
 		$("body").prepend("<style>"+innnerCss+"</style>");
@@ -513,6 +575,7 @@
 	};
 	movievipHelper.comprehensiveAnalysis=function(videoUrl, newWindow){ //综合解析
 		var jumpWebsite = "https://jatosi.github.io/?url="+videoUrl;
+		//var jumpWebsite = "http://ajiup.com/zz.html?url="+videoUrl;
 		if(newWindow && (typeof GM_openInTab==="function")){
 			GM_openInTab(jumpWebsite, {active: true});
 		}else{
