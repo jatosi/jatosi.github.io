@@ -15,6 +15,10 @@ $(function() {
         topValue = .04 * topValue;
         $("#palyer-iframe").height(palyerIframeHeight),
         $("#play-box").css("top", topValue);
+        
+        const url = new URL(window.location);
+        const media_url = url.searchParams.get('url');
+        const type = url.searchParams.get('type');
         if (media_url) {
             otherWebsiteUrl = media_url
         } else {
