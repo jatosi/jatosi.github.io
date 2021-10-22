@@ -16,6 +16,7 @@ $(function() {
         $("#palyer-iframe").height(palyerIframeHeight),
         $("#play-box").css("top", topValue);
         
+        /*
         const url = new URL(window.location);
         const media_url = url.searchParams.get('url');
         const type = url.searchParams.get('type');
@@ -24,13 +25,12 @@ $(function() {
         } else {
             otherWebsiteUrl = getCurrentVideoUrl();
         }
-        /*
+        */
         if (getUrl() == 0 ) {
             otherWebsiteUrl = getCurrentVideoUrl();
         } else {
             otherWebsiteUrl = getUrl();
         }
-        */
         //alert(otherWebsiteUrl);
         //alert(ROOT);
             
