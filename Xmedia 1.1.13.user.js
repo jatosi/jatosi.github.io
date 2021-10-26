@@ -3,8 +3,10 @@
 // @namespace    https://jatosi.github.io
 // @version      1.1.13
 // @description  全网VIP视频免费破解去广告(综合线路电视剧免跳出选集)支持爱奇艺、腾讯、优酷、哔哩哔哩等；全网音乐有声音频免客户端下载,支持网易云音乐、QQ音乐、酷狗、喜马拉雅、咪咕等；
-// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA7CAYAAADFJfKzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OEZFQzZGMzkyM0ExMUU5QkQ5MUFFMUI0RDI2QTEwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OEZFQzZGNDkyM0ExMUU5QkQ5MUFFMUI0RDI2QTEwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU4RkVDNkYxOTIzQTExRTlCRDkxQUUxQjREMjZBMTBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU4RkVDNkYyOTIzQTExRTlCRDkxQUUxQjREMjZBMTBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ymR1egAABQVJREFUeNrsW82LHEUUr1dV3TszbjaJrKsSiOjJQ0DwICgIeokoxIO3/HkexJMgOQgK4kEUJOBBk5t4SFaJbGLWj53t6fp4vtfV3TuZ2Rm7e2d2ejrT0Dtf1VX1q/f1e69qARHF03JJ8RRdG7AbsBuwG7CtvfTUNzehUUcu6t9T5vjqoifodO+hsslurYc+xYpgG1xeqpFzPpYCEATCArGi9aR+IC2g161QY+l9FKERAjKcC2EpCOARpIgx5U+yRTaLEoiJ0eoLnqBT8d9nVN0DXjnuT2T9tgos22zvvgdWZCRJ2ws+6n3ZbEbqY2lHu9wP90f93F/UHGGKG9+EM0hk61Da9GLWcdDmJp2xLLMHnY4PlR1drt3DDAclm67+jNd9Bsk3qzOCsjUdXcrPhYVC7u+3sv/iXrZkWWK0whczGHOcEHUG8MRPwKqIVX2WRPbkJ23DeMXzPDCGNxgWlHzDP8qlOwuRrNdbtzLH6OxOUC2yR3IadMNpN0yB4vYOZrWfvCcXBZ543hXjBs3h+Xi3zYNU9Q8zYxeq6DNw5gZ3ygMWK52Hlykrq/X9HGut1D6XLNC8MtA2vU6Av5Am+aARWAL6UfAvWKpUvqJuuvGMCULpoKrocdEaxfjApzYUqphPpk28RiZ5v5FkKc79CS7FoFq5SseDeyo9eimLffWc61La03x+Venw5eIZVnDSRvYtl2rFWeKilwED7cMs1g1+YqBtIvUE9BUXP3Mbc3Xg+bITbUAqoAwfLGhphq+1MYshAbwhQLqTcAUcpj6pDJY9mx+zQfLID9uctnkdPyjf07xpvlerSxbkoFCN3DsOW52kAhwJPHGi9Kd/Bm4Mqt0pefX5La1S4WV0TLZEWe7g+06XZVzUf0A0tEdcS3qTvumlTjsLlmL0s+QqiOfBgRLOu+ADMKefnSu4gQPlpTN7FP+URivos0NnbxBh+atrYHEiG4pB6V8UeiTAg0WVbtoClgBODGRHr3L5hqSsLWiT0fiov98JsHNqjKBADCk+eu/sFfbYaw92rtS9vUSk/YfIG0FZqquTk64d2Fyt3wqMwElWaWlG1zsLdsx5aVJp4xh2PLjTabBE5L+lHDmmRJLTtmvLHEuvEihloEfeYQRcidTxV2CS7qkxOafP+cWA1ByKgAtpJnlv2eOeu2SJJz9C73eAbFQp/Vh488J5jX3eYIk4QhqTNLOygjnuBjcer4x7Fe+TolpP/FgBjESzbZH2cmPiwYpA/kwE8dAh7kn6LHT09akV/HVWY5TRY+HsHtnmNa4LKTLMrOCzZG+7EskqmzwPgFaxherorvQubkPyvjQHRQCjDHjannpdF0/LqDpg1XphQ9dcsoijMi5kW6IeWo42KjbWIOTRaWWbpVzzQIxtXoGzu21GCuz1c6DZppt3f8zJsE7deceJXcM2SxdPppif46iz8+6lMvlxApFvhbT0BHY4cBAyKPjfMxx6RtiIMS+ZlVv6ZMzEiP5FpQ/ygdTKnBGZFjGxCyjKUzk59BDuasdZr7d+F868qNCVZyXInrcxnGNYnSzHABavDhQKFT0iMtOMVNCDV/ikmve4XZyCYQegWmWs2ekdBKmG0ibPnYlBMWn3Uf8bMMk7Ij8WhAJWbsDhFE1+3irqfyfT4dsLoYvSHL+braLu3SJS/zqZ7iBUhWEFmMO4tOhDiiI/gk0+lDXoKGz+1WUDdgN2ra7/BBgAWxKEmaaQjVwAAAAASUVORK5CYII=
+// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA7CAYAAADFJfKzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OEZFQzZGMzkyM0ExMUU5QkQ5MUFFMUI0RDI2QTEwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OEZFQzZGNDkyM0ExMUU5QkQ5MUFFMUI0RDI2QTEwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU4RkVDNkYxOTIzQTExRTlCRDkxQUUxQjREMjZBMTBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU4RkVDNkYyOTIzQTExRTlCRDkxQUUxQjREMjZBMTBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ymR1egAABQVJREFUeNrsW82LHEUUr1dV3TszbjaJrKsSiOjJQ0DwICgIeokoxIO3/HkexJMgOQgK4kEUJOBBk5t4SFaJbGLWj53t6fp4vtfV3TuZ2Rm7e2d2ejrT0Dtf1VX1q/f1e69qARHF03JJ8RRdG7AbsBuwG7CtvfTUNzehUUcu6t9T5vjqoifodO+hsslurYc+xYpgG1xeqpFzPpYCEATCArGi9aR+IC2g161QY+l9FKERAjKcC2EpCOARpIgx5U+yRTaLEoiJ0eoLnqBT8d9nVN0DXjnuT2T9tgos22zvvgdWZCRJ2ws+6n3ZbEbqY2lHu9wP90f93F/UHGGKG9+EM0hk61Da9GLWcdDmJp2xLLMHnY4PlR1drt3DDAclm67+jNd9Bsk3qzOCsjUdXcrPhYVC7u+3sv/&+Xi3zYNU9Q8zYxeq6DNw5gZ3ygMWK52Hlykrq/X9HGut1D6XLNC8MtA2vU6Av5Am+aARWAL6UfAvWKpUvqJuuvGMCULpoKrocdEaxfjApzYUqphPpk28RiZ5v5FkKc79CS7FoFq5SseDeyo9eimLffWc61La03x+Venw5eIZVnDSRvYtl2rFWeKilwED7cMs1g1+YqBtIvUE9BUXP3Mbc3Xg+bITbUAqoAwfLGhphq+1MYshAbwhQLqTcAUcpj6pDJY9mx+zQfLID9uctnkdPyjf07xpvlerSxbkoFCN3DsOW52kAhwJPHGi9Kd/Bm4Mqt0pefX5La1S4WV0TLZEWe7g+06XZVzUf0A0tEdcS3qTvumlTjsLlmL0s+QqiOfBgRLOu+ADMKefnSu4gQPlpTN7FP+URivos0NnbxBh+atrYHEiG4pB6V8UeiTAg0WVbtoClgBODGRHr3L5hqSsLWiT0fiov98JsHNqjKBADCk+eu/sFfbYaw92rtS9vUSk/YfIG0FZqquTk64d2Fyt3wqMwElWaWlG1zsLdsx5aVJp4xh2PLjTabBE5L+lHDmmRJLTtmvLHEuvEihloEfeYQRcidTxV2CS7qkxOafP+cWA1ByKgAtpJnlv2eOeu2SJJz9C73eAbFQp/Vh488J5jX3eYIk4QhqTNLOygjnuBjcer4x7Fe+TolpP/FgBjESzbZH2cmPiwYpA/kwE8dAh7kn6LHT09akV/HVWY5TRY+HsHtnmNa4LKTLMrOCzZG+7EskqmzwPgFaxherorvQubkPyvjQHRQCjDHjannpdF0/LqDpg1XphQ9dcsoijMi5kW6IeWo42KjbWIOTRaWWbpVzzQIxtXoGzu21GCuz1c6DZppt3f8zJsE7deceJXcM2SxdPppif46iz8+6lMvlxApFvhbT0BHY4cBAyKPjfMxx6RtiIMS+ZlVv6ZMzEiP5FpQ/ygdTKnBGZFjGxCyjKUzk59BDuasdZr7d+F868qNCVZyXInrcxnGNYnSzHABavDhQKFT0iMtOMVNCDV/ikmve4XZyCYQegWmWs2ekdBKmG0ibPnYlBMWn3Uf8bMMk7Ij8WhAJWbsDhFE1+3irqfyfT4dsLoYvSHL+braLu3SJS/zqZ7iBUhWEFmMO4tOhDiiI/gk0+lDXoKGz+1WUDdgN2ra7/BBgAWxKEmaaQjVwAAAAASUVORK5CYII=
 // @author       koyo
+// @updateURL    https://www.ajiup.com/Xmedia.user.js
+// @updateURL    https://jatosi.github.io/Xmedia.user.js
 //---------------------------------------------------
 // @include      *music.163.com*
 // @include      *://y.qq.com*
@@ -40,9 +42,11 @@
 // @include      *://vip.pptv.com/show/*
 // @include      *://v.pptv.com/show/*
 //---------------------------------------------------
-// @include      *://www.xvideos.com/*
 // @include      *://jatosi.github.io/*
 // @include      *ajiup.com/*
+// @include      *://www.xvideos.com/*
+// @include      *xvideos.com/*
+// @include      *://www.ixigua.com/*
 // @include      *ixigua.com/*
 //---------------------------------------------------
 // @include      *://www.xixicai.top/mov/s/*
@@ -107,7 +111,7 @@
 	 * xvideo视频下载
 	 */
   if (window.location.hostname === "xvideos.com" || window.location.hostname === "www.xvideos.com") {
-    var url = getUrl();
+    var url = getXvideoUrl();
     //alert(url);
     if (!!url) {
       var div = document.createElement("a");
@@ -311,34 +315,155 @@
 
       }
     }
-    if (xv() === xa()) {
-        //alert(vTop);
-        var div = document.createElement("a");
-        //div.innerHTML = "无下载";
-        div.style.cssText="color: white;\n" +
-            "    text-decoration: none;\n" +
-            //"    width: 150px;\n" +
-            //"    height: 40px;\n" +
-            "    line-height: 40px;\n" +
-            "    text-align: center;\n" +
-            "    background-color: #107C10;\n" +
-            "    position: fixed;\n" +
-            "    padding: 0px 10px;\n" +
-            "    top: " + vTop + "px;\n" +
-            //"    top: 50%;\n" +
-            "    z-index:999999;\n" +
-            "    right: 0px;\n" +
-            "    cursor: pointer;";
-        div.innerHTML = "在线合并音视频";
-        div.setAttribute("href","https://maple3142.github.io/mergemp4/","target","_blank");
-        div.setAttribute("target","_blank");
-      //alert(div.style.cssText);
-        document.body.appendChild(div);
+    
+    if (xv() > 0 && xa() > 0 ) {
+      //alert(vTop);
+      var div = document.createElement("a");
+      //div.innerHTML = "无下载";
+      div.style.cssText="color: white;\n" +
+          "    text-decoration: none;\n" +
+          //"    width: 150px;\n" +
+          //"    height: 40px;\n" +
+          "    line-height: 40px;\n" +
+          "    text-align: center;\n" +
+          "    background-color: #107C10;\n" +
+          "    position: fixed;\n" +
+          "    padding: 0px 10px;\n" +
+          "    top: " + vTop + "px;\n" +
+          //"    top: 50%;\n" +
+          "    z-index:999999;\n" +
+          "    right: 0px;\n" +
+          "    cursor: pointer;";
+      div.innerHTML = "在线合并音视频";
+      div.setAttribute("href","https://maple3142.github.io/mergemp4/","target","_blank");
+      div.setAttribute("target","_blank");
+    //alert(div.style.cssText);
+      document.body.appendChild(div);
+    }
+    else {
+      var str,zz,yy,a,b,c;
+      str = document.body.outerHTML.toString();
+      //alert(str);
+
+      zz = '"video_list":';
+      yy = '}},';
+
+      a = str.indexOf(zz);
+      //alert(a);
+      str = str.substring(a).toString();
+      //alert(str);
+      b = str.indexOf(yy);
+      //alert("B:" + b);
+      c = zz.length;
+      //alert(c);
+      str = str.substring(c+1,b);
+      //str = str.replace("'","");
+
+
+      try {
+        str = str.replace('"video_1":',"");
+        str = str + "}";
+        res = JSON.parse(str);
+        //alert(res.length);
+        //alert(res[0]);
+        //document.write(res);  
+        //document.write("<br>");
+      } catch(e) { 
+        //document.writeln("Caught: " + e.message);
+        return 0;
       }
+
+      //document.write(res);  
+      //document.write("<br>");
+
+      var size = res.definition;
+      str = res.main_url;
+      str = str.replace("u002F","");
+      str = str.replace(/\\/ig,"/");
+      str = decodeURI(str);
+      str = str.replace("%3D","=");
+      url = decode64(str);
+      /*
+      document.write(size + " : ");
+      document.write(url);
+      document.write("<br>");
+      */
+      var array = [];
+      var divHtml,link="";
+      var n = 150;
+
+      var divHtml = document.createElement("div");
+
+      var topBox = "<div>";
+
+      if (!!url) {
+        cssText="color: white;text-decoration: none;line-height: 40px;text-align: center;font-size:10px;" +
+            "    background-color: coral;position: fixed;padding: 0px 10px;" +
+            "    top: " + n + "px;z-index:999999;right: 0px;cursor: pointer;";
+        link += "<a href='" + url + "' target='_blank' style='" + cssText + "'>下载" + size + "视频</a>";
+
+      }
+      n = n + 45;
+
+      //alert(n);
+      vTop = n;
+
+      //document.write("<br>");
+      if (!!link) {
+
+        topBox +=link;
+        topBox +="</div>";
+        //alert(topBox);
+        //document.write(topBox);
+
+        divHtml.innerHTML = topBox;
+        //alert(divHtml.innerHTML);
+        document.body.appendChild(divHtml);
+
+        return 1;
+
+      }
+    }
   }
 
 //************************************************ jatosi 21.10.25 begin ************************************************
 
+
+function getXvideoUrl() {
+  /*
+  const url = new URL(window.location);
+  const media_url = url.searchParams.get('url');
+  const type = url.searchParams.get('type');
+  */
+  //alert(url);
+  //alert(media_url);
+  //alert(type);alert("GM_xmlhttpRequest");
+  
+  //alert(!media_url);
+  
+  //var str = document.body.innerText ? 'innerText' : 'textContent';
+  var str,a,b,c;
+  str = document.body.outerHTML.toString();
+  //alert(str);
+  a = str.indexOf("setVideoUrlHigh(");
+  //alert(a);
+  str = str.substring(a).toString();
+  //alert(str);
+  b = str.indexOf(")");
+  //alert("B:" + b);
+  c = "setVideoUrlHigh(".length;
+  //alert(c);
+  str = str.substring(c+1,b-1);
+  //str = str.replace("'","");
+  //alert(str);
+  if (str.indexOf(".mp4")>0) {
+    return str;
+  } else {
+    return 0;
+  }
+    
+}
+    
 //替换字符串 str原字符串  oldStr需要替换的，newStr替换成的
 function replaceAll(str, oldStr, newStr){
   var temp = '';
