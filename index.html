@@ -1273,6 +1273,15 @@
         min-height:auto;
       }
 
+      /* 语言切换按钮防止被其它元素挤压变形，保证"EN"始终完整可点 */
+      .lang-toggle{
+        flex-shrink:0;
+      }
+      .lang-btn{
+        padding:5px 12px;
+        font-size:12px;
+      }
+
       /* ===== 移动端布局修复 =====
          桌面版是"整屏不滚动、面板内部各自滚动"的固定视口设计；
          手机上视口高度往往不够，会把内容硬生生裁掉。
@@ -1294,13 +1303,44 @@
       .panel{
         min-height:auto;
       }
+
+      /* ===== 手机端播放器控件区 =====
+         手机屏幕横向空间太窄，封面缩略图 + 播放控件并排会把
+         控件挤得没地方放，导致音量条只能换到单独一行、显得
+         又粗又长。这里干脆在手机上隐藏封面缩略图，把整行
+         空间都让给播放控件，这样播放按钮和音量条就能正常
+         地在同一行、左对齐显示，不用再挤在一起。 */
       .player-top{
         min-height:auto;
       }
+      .cover-wrapper{
+        display:none;
+      }
+      .player-main{
+        width:100%;
+      }
+      .control-row{
+        justify-content:flex-start;
+        gap:10px;
+      }
+      .control-main{
+        flex:0 0 auto;
+      }
+      .control-secondary{
+        flex:0 0 auto;
+        justify-content:flex-start;
+      }
+      .volume-slider{
+        flex:0 0 auto;
+        width:90px;
+      }
+
+      /* 播放控件区与下方歌词区拉开一点距离，避免看起来太挤 */
       .lyrics-container{
         flex:none;
         max-height:44vh;
         min-height:180px;
+        margin-top:18px;
         -webkit-overflow-scrolling:touch;
       }
       .search-results-mini{
@@ -1317,18 +1357,11 @@
       }
     }
 
-    /* 更窄的手机屏幕：封面和标题再收紧一点，给列表让出更多空间 */
+    /* 更窄的手机屏幕：标题字号收紧一点，给列表让出更多空间 */
     @media (max-width:480px){
       .app{
         margin:8px;
         padding:8px 8px 14px;
-      }
-      .cover-wrapper{
-        width:96px;
-        height:96px;
-      }
-      .player-top{
-        min-height:120px;
       }
       .track-title{
         font-size:16px;
