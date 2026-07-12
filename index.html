@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- 圆润可爱字体 -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-  <script src="/song.js" type="text/javascript" crossorigin="anonymous"></script>
+  <script src="song.js" type="text/javascript" crossorigin="anonymous"></script>
   <style>
     :root {
       --bg-dark: #02030a;
@@ -1697,6 +1697,9 @@
         toastQueuedNext:"当前歌曲播完后将自动播放该搜索结果，也可点击立即播放",
         playNowLabel:"立即播放",
         toastTapToPlay:"点击页面任意位置开始播放",
+        updateAvailable:"发现新版本 {v}",
+        updateNowLabel:"去更新",
+        updateDismissLabel:"暂不提醒",
         toastNeedPlaylistSelected:"请先选择一个歌单。",
         toastNoCurrentTrack:"当前没有正在播放的歌曲。",
         sourceNetease:"网易云",
@@ -1709,7 +1712,7 @@
         modalCancel:"取消"
       },
       en: {
-        appTitle:"Miao Music Station",
+        appTitle:"aggregation Music Station",
         authorLabel:"Author: Zhenchao Jin + GPT 5.1",
         shortcutHint:"Shortcuts: Space Play/Pause · ←/→ Seek · ↑/↓ Volume · N/P Track · F Fav · L Lyrics FX",
         shortcutPanelTitle:"Keyboard Shortcuts",
@@ -1781,6 +1784,9 @@
         toastQueuedNext:"Will play after the current song ends — or tap play now",
         playNowLabel:"Play now",
         toastTapToPlay:"Tap anywhere to start playback",
+        updateAvailable:"New version {v} available",
+        updateNowLabel:"Update",
+        updateDismissLabel:"Not now",
         toastNeedPlaylistSelected:"Please select a playlist first.",
         toastNoCurrentTrack:"No track is currently playing.",
         sourceNetease:"Netease",
@@ -1825,16 +1831,6 @@
 
     const LIBRARY_STORAGE_KEY = 'pikachu-music-library-v1';
     const PLAYMODE_TABS_STORAGE_KEY = 'pikachu-music-playmode-tabs';
-
-
-    // ===================== 版本与更新检查 =====================
-    // 每次打包新的 APK / 发布新版本前，把这里的版本号改成新版本。
-    const APP_VERSION = '1.0.0';
-    // 打包 APK 之前，把下面这个地址换成你自己存放 version.json 的稳定链接
-    // （比如 GitHub 仓库里的 raw 文件地址、GitHub Pages 地址等，只要是能被
-    // fetch 到的静态文件即可，不需要真正的后端服务）。留空或包含
-    // "YOUR_" 字样时会自动跳过检查，不会报错。
-    const UPDATE_CHECK_URL = 'https://jatosi.github.io/version.json';
 
     const dom = {};
     let audioLevel = 0;
@@ -2928,71 +2924,6 @@
       document.addEventListener('touchstart',resume,{once:true});
     }
 
-    // ===================== 检查更新 =====================
-    // 原理很简单：请求一个静态的 version.json 文件（不需要后端服务），
-    // 把里面的 latestVersion 和当前 APP_VERSION 比较，
-    // 如果远端版本更新，就在页面底部弹一条不打扰的提示条，
-    // 用户点"去更新"会打开 apkUrl 对应的下载链接。
-    //
-    // version.json 内容示例：
-    // {
-    //   "latestVersion": "1.1.0",
-    //   "apkUrl": "https://your-host/app-1.1.0.apk",
-    //   "notes": "修复了xxx问题"
-    // }
-
-    function isNewerVersion(remote, current){
-      const a=String(remote).split('.').map(n=>parseInt(n,10)||0);
-      const b=String(current).split('.').map(n=>parseInt(n,10)||0);
-      for(let i=0;i<Math.max(a.length,b.length);i++){
-        const x=a[i]||0, y=b[i]||0;
-        if(x>y) return true;
-        if(x<y) return false;
-      }
-      return false;
-    }
-
-    function showUpdateBanner(data){
-      if(document.getElementById('update-banner')) return;
-      const bar=document.createElement('div');
-      bar.id='update-banner';
-      bar.className='update-banner';
-
-      const text=document.createElement('span');
-      text.textContent=t('发现新版本！').replace('{v}', data.latestVersion||'');
-      bar.appendChild(text);
-
-      if(data.apkUrl){
-        const btn=document.createElement('button');
-        btn.className='btn btn-secondary';
-        btn.textContent=t('现在更新！');
-        btn.addEventListener('click',()=>{ window.open(data.apkUrl, '_blank'); });
-        bar.appendChild(btn);
-      }
-
-      const closeBtn=document.createElement('button');
-      closeBtn.className='btn btn-ghost btn-icon';
-      closeBtn.textContent='✕';
-      closeBtn.title=t('updateDismissLabel');
-      closeBtn.addEventListener('click',()=>bar.remove());
-      bar.appendChild(closeBtn);
-
-      document.body.appendChild(bar);
-    }
-
-    async function checkForUpdate(){
-      if(!UPDATE_CHECK_URL || UPDATE_CHECK_URL.indexOf('YOUR_')===0) return;
-      try{
-        const res=await fetch(UPDATE_CHECK_URL, {cache:'no-store'});
-        if(!res.ok) return;
-        const data=await res.json();
-        if(data && data.latestVersion && isNewerVersion(data.latestVersion, APP_VERSION)){
-          showUpdateBanner(data);
-        }
-      }catch(e){
-        console.warn('check update failed', e);
-      }
-    }
 
     function setupMediaSession(){
       if(!('mediaSession' in navigator)) return;
@@ -3858,6 +3789,85 @@
         if(e.key==='/'&&!typing){e.preventDefault();dom.searchInput.focus();dom.searchInput.select();}
       });
     }
+
+
+    
+    // ===================== 版本与更新检查 =====================
+    // 每次打包新的 APK / 发布新版本前，把这里的版本号改成新版本。
+    const APP_VERSION = '1.0.0';
+    // 打包 APK 之前，把下面这个地址换成你自己存放 version.json 的稳定链接
+    // （比如 GitHub 仓库里的 raw 文件地址、GitHub Pages 地址等，只要是能被
+    // fetch 到的静态文件即可，不需要真正的后端服务）。留空或包含
+    // "YOUR_" 字样时会自动跳过检查，不会报错。
+    const UPDATE_CHECK_URL = 'https://jatosi.github.io/version.json';
+    
+    // ===================== 检查更新 =====================
+    // 原理很简单：请求一个静态的 version.json 文件（不需要后端服务），
+    // 把里面的 latestVersion 和当前 APP_VERSION 比较，
+    // 如果远端版本更新，就在页面底部弹一条不打扰的提示条，
+    // 用户点"去更新"会打开 apkUrl 对应的下载链接。
+    //
+    // version.json 内容示例：
+    // {
+    //   "latestVersion": "1.1.0",
+    //   "apkUrl": "https://your-host/app-1.1.0.apk",
+    //   "notes": "修复了xxx问题"
+    // }
+
+    function isNewerVersion(remote, current){
+      const a=String(remote).split('.').map(n=>parseInt(n,10)||0);
+      const b=String(current).split('.').map(n=>parseInt(n,10)||0);
+      for(let i=0;i<Math.max(a.length,b.length);i++){
+        const x=a[i]||0, y=b[i]||0;
+        if(x>y) return true;
+        if(x<y) return false;
+      }
+      return false;
+    }
+
+    function showUpdateBanner(data){
+      if(document.getElementById('update-banner')) return;
+      const bar=document.createElement('div');
+      bar.id='update-banner';
+      bar.className='update-banner';
+
+      const text=document.createElement('span');
+      text.textContent=t('updateAvailable').replace('{v}', data.latestVersion||'');
+      bar.appendChild(text);
+
+      if(data.apkUrl){
+        const btn=document.createElement('button');
+        btn.className='btn btn-secondary';
+        btn.textContent=t('现在更新！');
+        btn.addEventListener('click',()=>{ window.open(data.apkUrl, '_blank'); });
+        bar.appendChild(btn);
+      }
+
+      const closeBtn=document.createElement('button');
+      closeBtn.className='btn btn-ghost btn-icon';
+      closeBtn.textContent='✕';
+      closeBtn.title=t('现在更新！');
+      closeBtn.addEventListener('click',()=>bar.remove());
+      bar.appendChild(closeBtn);
+
+      document.body.appendChild(bar);
+    }
+
+    async function checkForUpdate(){
+      if(!UPDATE_CHECK_URL || UPDATE_CHECK_URL.indexOf('YOUR_')===0) return;
+      try{
+        const res=await fetch(UPDATE_CHECK_URL, {cache:'no-store'});
+        if(!res.ok) return;
+        const data=await res.json();
+        if(data && data.latestVersion && isNewerVersion(data.latestVersion, APP_VERSION)){
+          showUpdateBanner(data);
+        }
+      }catch(e){
+        console.warn('check update failed', e);
+      }
+    }
+
+
 
     // ===================== 初始化 =====================
 
