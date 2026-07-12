@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- 圆润可爱字体 -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-  <script src="song.js" type="text/javascript" crossorigin="anonymous"></script>
+  <script src="/song.js" type="text/javascript" crossorigin="anonymous"></script>
   <style>
     :root {
       --bg-dark: #02030a;
@@ -2959,13 +2959,13 @@
       bar.className='update-banner';
 
       const text=document.createElement('span');
-      text.textContent=t('updateAvailable').replace('{v}', data.latestVersion||'');
+      text.textContent=t('发现新版本！').replace('{v}', data.latestVersion||'');
       bar.appendChild(text);
 
       if(data.apkUrl){
         const btn=document.createElement('button');
         btn.className='btn btn-secondary';
-        btn.textContent=t('updateNowLabel');
+        btn.textContent=t('现在更新！');
         btn.addEventListener('click',()=>{ window.open(data.apkUrl, '_blank'); });
         bar.appendChild(btn);
       }
