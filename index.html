@@ -770,6 +770,14 @@
       margin-top:18px;
       letter-spacing:0.03em;
     }
+    @media screen and (max-width: 768px) {
+      .lyrics-container {
+        height: 20px;
+        max-height: 160px;
+        flex: none;
+      }
+    }
+
 
     /* 右侧播放列表面板 */
     .playlist-panel {
@@ -1491,7 +1499,7 @@
               <div class="player-actions">
                 <div class="player-btn-row">
                   <button id="fav-btn" class="btn btn-secondary btn-icon ripple-target" title="收藏 (F)">❤</button>
-                  <button id="download-btn" class="btn btn-secondary btn-icon ripple-target" title="下载">🢃</button>
+                  <button id="download-btn" class="btn btn-secondary btn-icon ripple-target" title="下载">🡻</button>
                 </div>
                 <div id="player-status" class="status-pill" data-i18n="playerStatusIdle">空闲</div>
               </div>
@@ -3919,7 +3927,7 @@
       setPlaymodeUI();
       dom.audio.volume=parseFloat(dom.volumeSlider.value);
       playRandomRecommended();
-      checkForUpdate();
+      // checkForUpdate();
     }
 
     document.addEventListener('DOMContentLoaded',init);
