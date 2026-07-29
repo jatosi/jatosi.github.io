@@ -437,6 +437,7 @@
       align-items: center;
   gap: 8px; /* 增加左右两大区域之间的间隙 */
       padding: 6px 8px;
+      margin-top: 2px;
       margin-bottom: 4px;
       border-radius: 10px;
       background: rgba(8,10,32,0.78);
@@ -1702,7 +1703,7 @@
           </div>
 
           <div class="search-stats">
-            <span id="search-status" data-i18n="searchStatusIdle">尚未搜索，试试输入“林俊杰”？</span>
+            <span id="search-status" data-i18n="searchStatusIdle">尚未搜索，试试输入“任贤齐”？</span>
             <span id="search-count">0</span>
           </div>
 
@@ -3616,6 +3617,7 @@
       return arr;
     }
 
+    // 将曲库里的每条原始数据标准化为 {song, singer, sYear} 格式，方便后续搜索。
     function normalizeSongEntry(raw){
       // 标准格式：{song, singer, sYear, ...}（也兼容个别曲库用 name/title/artist/year 等字段名）
       if(raw && typeof raw==='object' && !Array.isArray(raw)){
