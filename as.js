@@ -11,10 +11,10 @@
     banner: {
       type: 'image', // 可选类型: 'image' (图片链接) 或 'custom' (插入HTML/外接第三方JS)
       // 当 type 为 'image' 时生效：
-      pcImage: 'b2.png',
-      pcLink: 'https://example.com/pc-ad',
-      mobileImage: 'b3.png',
-      mobileLink: 'https://example.com/mobile-ad',
+      pcImage: 'bb2.png',
+      pcLink: 'https://movie.xxooe.com',
+      mobileImage: 'bb1.png',
+      mobileLink: 'https://github.com/jatoxu/jatoxu.github.io/releases/download/1.10/miaoying.1.1.0.apk',
       // 当 type 为 'custom' 时生效：
       customHtml: '<div id="third-party-banner-ad"></div><script src="https://example.com/ad-sdk.js"></script>'
     },
@@ -26,17 +26,17 @@
       
       // 【新增功能】：弹窗频率限制（单位：小时）。
       // 设置为 1 表示 1小时内只弹一次；24 表示 24小时内只弹一次；设为 0 则每次刷新都弹出；-1则不弹。
-      frequencyHours: 24, 
+      frequencyHours: 0, 
 
       // 电脑端弹窗配置
       pc: {
-        image: 'ab.jpg', // 示例图片，可更改为具体的弹窗海报图片
-        link: 'https://example.com/popup-pc'
+        image: 'CC2.PNG', // 示例图片，可更改为具体的弹窗海报图片
+        link: 'https://movie.xxooe.com'
       },
       // 移动端弹窗配置
       mobile: {
-        image: 'as.jpg', // 示例图片
-        link: 'https://example.com/popup-mobile'
+        image: 'DD4.PNG', // 示例图片
+        link: 'https://github.com/jatoxu/jatoxu.github.io/releases/download/1.10/miaoying.1.1.0.apk'
       },
       // 自定义代码
       customHtml: '<div id="popup-ad-widget"></div>'
@@ -84,6 +84,7 @@
     style.textContent = `
       /* 底部 Banner 样式 */
       .ban-slot {
+        margin-top: 12px;
         width: 100%;
         display: flex;
         justify-content: center;
