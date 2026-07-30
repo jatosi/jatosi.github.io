@@ -13,7 +13,7 @@
       // 当 type 为 'image' 时生效：
       pcImage: 'bb2.png',
       pcLink: 'https://movie.xxooe.com',
-      mobileImage: 'bb1.png',
+      mobileImage: 'cc3.png',
       mobileLink: 'https://github.com/jatoxu/jatoxu.github.io/releases/download/1.10/miaoying.1.1.0.apk',
       // 当 type 为 'custom' 时生效：
       customHtml: '<div id="third-party-banner-ad"></div><script src="https://example.com/ad-sdk.js"></script>'
