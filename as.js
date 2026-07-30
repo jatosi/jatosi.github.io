@@ -30,12 +30,12 @@
 
       // 电脑端弹窗配置
       pc: {
-        image: 'CC2.PNG', // 示例图片，可更改为具体的弹窗海报图片
+        image: 'cc2.png', // 示例图片，可更改为具体的弹窗海报图片
         link: 'https://movie.xxooe.com'
       },
       // 移动端弹窗配置
       mobile: {
-        image: 'DD4.PNG', // 示例图片
+        image: 'dd4.png', // 示例图片
         link: 'https://github.com/jatoxu/jatoxu.github.io/releases/download/1.10/miaoying.1.1.0.apk'
       },
       // 自定义代码
